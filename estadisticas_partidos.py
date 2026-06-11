@@ -24,7 +24,7 @@ all_columns = [
     'TR Visitante', 'FPF Visitante', 'FPC Visitante', 'Val Visitante', '+/- Visitante', 
     'P1Visitante', 'P2Visitante', 'Q1Visitante', 'Q2Visitante', 'Q3Visitante', 'Q4Visitante', 
     'PR1Visitante', 'PR2Visitante', 'PR3Visitante', 'Entrenador Visitante',
-    'ID Equipo Local', 'ID Equipo Visitante'  # 👈 Nuevas columnas al final
+    'ID Equipo Local', 'ID Equipo Visitante'  
 ]
 
 int_columns = [
@@ -97,7 +97,7 @@ for url in urls_24:
                                 (df['Jornada'] == jornada_actual)]
                 
                 if not coincidencia.empty:
-                    print(f"⏩ Redirección detectada en ID {url.split('/')[-2]}. El partido {eq_local} vs {eq_vis} ya estaba guardado. Saltando...")
+                    print(f"Redirección detectada en ID {url.split('/')[-2]}. El partido {eq_local} vs {eq_vis} ya estaba guardado. Saltando...")
                     break 
 
                 home_team_official = eq_local
