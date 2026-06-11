@@ -52,4 +52,13 @@ Para generar correctamente los archivos CSV finales destinados al modelo semánt
 7. **Ejecutar `promedios_jugadores_todas.py`**: Cruza los promedios globales de jugadores apoyándose en la tabla de dimensiones ya procesada de los equipos.
 8. **Ejecutar `historico_equipos.py` e `historico_jugadores.py`**: Unifica en un único archivo los totales de cada equipo y jugador.
 
-### Fase IV: Generación del Modelo en
+### Fase IV: Generación del Modelo en Estrella
+9. **Ejecutar scripts de Carga Restantes (`dimfactjugadores.py`, `FactHistoricoequipos.py`, `factHistorico_jugadores.py`)**: Divide la información de forma definitiva en las entidades de hechos y dimensiones óptimas para la carga de datos en Power BI.
+
+## Notas de Configuración
+
+* **Variables de Enriquecimiento Manual:** Los campos relativos a `pais`, `ciudad` y la URL del `logo` de los clubes no forman parte de las propiedades nativas extraídas por Web Scraping. Estas variables visuales y descriptivas fueron añadidas de manera manual para mejorar el análisis en las interfaces de usuario. Cualquier réplica del flujo que desee contar con dichas columnas deberá incluirlas de forma propia.
+* **Políticas de Rate Limiting:** Los scripts de extracción incorporan pausas de tiempo aleatorias (`time.sleep`) y gestión de cabeceras de red para respetar las restricciones de tráfico y concurrencia de las plataformas de origen.
+
+---
+Universidad Politécnica de Valencia | Escuela Técnica Superior de Ingeniería Informática (ETSINF)
