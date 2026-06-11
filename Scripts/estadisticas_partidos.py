@@ -166,7 +166,7 @@ for url in urls_24:
                             totals.update(extracted_data)
 
                 dfn = pd.DataFrame(totals, index=[0])
-                # Asegurar que el dfn tenga las columnas en el orden estricto de all_columns
+                # Aseguramos que el dfn tenga las columnas en el orden estricto de all_columns
                 dfn = dfn.reindex(columns=all_columns)
                 df = pd.concat([df, dfn], ignore_index=True)
                 print(f"J{totals['Jornada']} ({totals['Fase']}) - OK: {totals['Equipo Local']} vs {totals['Equipo Visitante']} [{id_equipo_local} vs {id_equipo_visitante}]")
@@ -192,4 +192,4 @@ try:
 except:
     pass
 
-print(f"TERMINADO. Tienes {len(df)} partidos reales guardados con sus respectivos IDs de equipo.")
+print(f"TERMINADO. Hay {len(df)} partidos")
